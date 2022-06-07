@@ -1,0 +1,394 @@
+description: Dark theme for Drafts
+author: Daniel Bayley
+isDark: true
+
+colors: # https://docs.getdrafts.com/docs/extending/development/theme-format#colors
+  editor:
+    foreground:                         *FOREGROUND
+    background:                         *BACKGROUND
+    heading:                            *PURPLE
+    strikethrough:                      *YELLOW
+    comment:                            *COMMENT
+    link:                               *CYAN
+    activeLink:                         *CYAN
+    code:                               *GREEN
+    codeBackground:                     *BLACK
+    literal:                            *YELLOW
+    keyword:                            *PINK
+    markup:                             *COMMENT
+    addition:                           *GREEN
+    deletion:                           *RED
+    substitution:                       *ORANGE
+    highlight:                          *SELECTION
+    invisibles:                         *SELECTION
+    accent01:                           *PURPLE
+    accent02:                           *PINK
+    accent03:                           *GREEN
+    accent04:                           *CYAN
+    accent05:                           *ORANGE
+    accent06:                           *YELLOW
+
+  interface: # https://docs.getdrafts.com/docs/extending/development/theme-format#interface-colors
+    textForeground:                     *FOREGROUND
+    textBackground:                     *BACKGROUND
+    textSelection:                      *SELECTION
+    textHighlight:                      *SELECTION
+    textCaret:                          *FOREGROUND
+    # iOS
+    foreground:                         *FOREGROUND
+    caption:                            *COMMENT
+    background:                         *BACKGROUND
+    backgroundCollection:               *BLACK
+    border:                             *BLACK
+    tint:                               *PURPLE
+    tintAlternate:                      *COMMENT
+    flagged:                            *ORANGE
+    move:                               *CYAN
+    delete:                             *RED
+    tagForeground:                      *BACKGROUND
+    tagBackground:                      *PURPLE
+    tagAddHighlight:                    *GREEN
+    tagRemoveHighlight:                 *RED
+    promptBackground:                   *BACKGROUND
+    promptButtonBackground:             *BLUE
+    promptButtonForeground:             *FOREGROUND
+    promptButtonDestructiveForeground:  *FOREGROUND
+    promptButtonDestructiveBackground:  *RED
+    actionBarBackground:                *BLACK
+    actionBarKeyBackground:             *BACKGROUND
+    actionBarKeyForeground:             *BRIGHT_BLACK
+    messageForeground:                  *FOREGROUND
+    messageSuccess:                     *GREEN
+    messageInfo:                        *BLUE
+    messageWarning:                     *ORANGE
+    messageError:                       *RED
+    tintGray:                           *BRIGHT_BLACK
+    tintRed:                            *BRIGHT_RED
+    tintPink:                           *BRIGHT_MAGENTA
+    tintOrange:                         *ORANGE
+    tintYellow:                         *BRIGHT_YELLOW
+    tintGreen:                          *BRIGHT_GREEN
+    tintIndigo:                         *BRIGHT_BLUE
+    tintBlue:                           *BRIGHT_BLUE
+    tintViolet:                         *PURPLE
+    # iOS 14+/macOS 11+ Widgets
+    # https://docs.getdrafts.com/changelog/#custom-theme-support-for-widgets--new-action-icons
+    widgetBackground:                   *BLACK
+    widgetBackgroundAlternate:          *BACKGROUND
+    widgetForeground:                   *FOREGROUND
+    widgetForegroundAlternate:          *COMMENT
+
+scopes: # https://docs.getdrafts.com/docs/extending/development/theme-format#scopes
+  color.blue:
+    settings:
+      foreground: *BLUE
+  color.indigo:
+    settings:
+      foreground: *BLUE
+  color.purple:
+    settings:
+      foreground: *PURPLE
+  color.pink:
+    settings:
+      foreground: *PINK
+  color.red:
+    settings:
+      foreground: *RED
+  color.orange:
+    settings:
+      foreground: *ORANGE
+  color.yellow:
+    settings:
+      foreground: *YELLOW
+  color.green:
+    settings:
+      foreground: *GREEN
+  color.black:
+    settings:
+      foreground: *BLACK
+  color.white:
+    settings:
+      foreground: *BRIGHT_WHITE
+  color.gray:
+    settings:
+      foreground: *BRIGHT_BLACK
+  color.accent01:
+    settings:
+      foreground: accent01
+  color.accent02:
+    settings:
+      foreground: accent02
+  color.accent03:
+    settings:
+      foreground: accent03
+  color.accent04:
+    settings:
+      foreground: accent04
+  color.accent05:
+    settings:
+      foreground: accent05
+  color.accent06:
+    settings:
+      foreground: accent06
+
+  text.normal:
+    settings:
+      foreground: foreground
+      fontStyle: normal
+  text.normal.large:
+    settings:
+      fontSize: large
+  text.normal.extraLarge:
+    settings:
+      fontSize: extraLarge
+  text.normal.small:
+    settings:
+      fontSize: small
+  text.normal.extraSmall:
+    settings:
+      fontSize: extraSmall
+
+  text.bold:
+    settings: &BOLD
+      fontWeight: bold
+      foreground: accent05
+  text.bold.large:
+    settings:
+      <<: *BOLD
+      fontSize: large
+  text.bold.extraLarge:
+    settings:
+      <<: *BOLD
+      fontSize: extraLarge
+  text.bold.small:
+    settings:
+      <<: *BOLD
+      fontSize: small
+  text.bold.extraSmall:
+    settings:
+      <<: *BOLD
+      fontSize: extraSmall
+
+  text.italic:
+    settings: &ITALIC
+      fontStyle:  italic
+      foreground: accent06
+  text.italic.large:
+    settings:
+      <<: *ITALIC
+      fontSize: large
+  text.italic.extraLarge:
+    settings:
+      <<: *ITALIC
+      fontSize: extraLarge
+  text.italic.small:
+    settings:
+      <<: *ITALIC
+      fontSize: small
+  text.italic.extraSmall:
+    settings:
+      <<: *ITALIC
+      fontSize: extraSmall
+
+  text.bolditalic:
+    settings:
+      <<: [*BOLD, *ITALIC]
+  text.bolditalic.large:
+    settings:
+      <<: [*BOLD, *ITALIC]
+      fontSize: large
+  text.bolditalic.extraLarge:
+    settings:
+      <<: [*BOLD, *ITALIC]
+      fontSize: extraLarge
+  text.bolditalic.small:
+    settings:
+      <<: [*BOLD, *ITALIC]
+      fontSize: small
+  text.bolditalic.extraSmall:
+    settings:
+      <<: [*BOLD, *ITALIC]
+      fontSize: extraSmall
+
+  text.monospace:
+    settings: &MONO
+      fontStyle: monospace
+  text.monospace.large:
+    settings:
+      <<: *MONO
+      fontSize: large
+  text.monospace.extraLarge:
+    settings:
+      <<: *MONO
+      fontSize: extraLarge
+  text.monospace.small:
+    settings:
+      <<: *MONO
+      fontSize: small
+  text.monospace.extraSmall:
+    settings:
+      <<: *MONO
+      fontSize: extraSmall
+
+  text.monospace.bold:
+    settings:
+      <<: [*MONO, *BOLD]
+  text.monospace.bold.large:
+    settings:
+      <<: [*MONO, *BOLD]
+      fontSize: large
+  text.monospace.bold.extraLarge:
+    settings:
+      <<: [*MONO, *BOLD]
+      fontSize: extraLarge
+  text.monospace.bold.small:
+    settings:
+      <<: [*MONO, *BOLD]
+      fontSize: small
+  text.monospace.bold.extraSmall:
+    settings:
+      <<: [*MONO, *BOLD]
+      fontSize: small
+
+  text.monospace.italic:
+    settings: &MONO_ITALIC
+      <<: *ITALIC
+      fontStyle: monospace,italic
+  text.monospace.italic.large:
+    settings:
+      <<: *MONO_ITALIC
+      fontSize: large
+  text.monospace.italic.extraLarge:
+    settings:
+      <<: *MONO_ITALIC
+      fontSize: extraLarge
+  text.monospace.italic.small:
+    settings:
+      <<: *MONO_ITALIC
+      fontSize: small
+  text.monospace.italic.extraSmall:
+    settings:
+      <<: *MONO_ITALIC
+      fontSize: extraSmall
+
+  text.underline:
+    settings:
+      fontStyle: underline
+
+  # h1–6
+  text.heading:
+    settings: &HEADING
+      fontWeight: bold
+      foreground: heading
+  text.heading01:
+    settings:
+      <<: *HEADING
+      fontSize: extraLarge
+  text.heading02:
+    settings:
+      <<: *HEADING
+      fontSize: large
+  text.heading03:
+    settings:
+      <<: *HEADING
+      fontSize: normal
+  text.heading04:
+    settings:
+      <<: *HEADING
+      fontSize: normal
+  text.heading05:
+    settings:
+      <<: *HEADING
+      fontSize: normal
+  text.heading06:
+    settings:
+      <<: *HEADING
+      fontSize: normal
+
+  text.url:
+    name: URL
+    settings:
+      foreground: link
+  text.link:
+    settings:
+      foreground: accent02
+  text.activeLink: &ACTIVE_LINK
+    settings:
+      foreground: activeLink
+      fontStyle: underline
+  text.linkModeLink: *ACTIVE_LINK
+
+  text.quotation:
+    settings: *ITALIC
+
+  text.strikethrough:
+    settings:
+      fontStyle: strikethrough
+      foreground: strikethrough
+
+  text.invisibles:
+    settings:
+      fontStyle: invisibles
+      foreground: invisibles
+
+  markup: # https://spec.draculatheme.com#sec-Markup-Markdown-RST-etc-
+    settings:
+      foreground: markup
+  markup.heading: ## × 1–6
+    settings:
+      foreground: heading
+      fontSize: large
+  markup.quotation: # >
+    settings:
+      <<: *ITALIC
+      fontStyle: normal
+  markup.list: # -,*,1+.
+    settings:
+      foreground: accent04
+  markup.link: # []()
+    settings:
+      foreground: foreground
+  markup.code: # ``
+    settings:
+      foreground: markup
+  markup.addition:
+    settings:
+      <<: *ITALIC
+      foreground: addition
+  markup.deletion:
+    settings:
+      <<: *ITALIC
+      foreground: deletion
+  markup.substitution:
+    settings:
+      <<: *ITALIC
+      foreground: substitution
+  markup.highlight:
+    settings:
+      background: highlight
+      foreground: textHighlight
+
+  code.comment:
+    settings:
+      foreground: comment
+  code.inline:
+    settings: &CODE
+      fontStyle:  monospace
+      foreground: code
+      background: codeBackground
+  code.block:
+    settings:
+      <<: *CODE
+      foreground: accent05
+  code.literal:
+    settings:
+      foreground: literal
+  code.keyword:
+    settings:
+      foreground: keyword
+  code.operator:
+    settings:
+      foreground: accent02
+  code.punctuation:
+    settings:
+      foreground: foreground
