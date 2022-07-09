@@ -3,13 +3,13 @@
 > A dark theme for [Drafts](https://getdrafts.com).
 
 <p align="center">
-  <img src="screenshots/ios/edit.png"     alt="iOS" width="45%"/>
-  <img src="screenshots/ios/list.png"     alt="iOS" width="45%"/>
-  <img src="screenshots/ios/actions.png"  alt="iOS" width="45%"/>
-  <img src="screenshots/ios/settings.png" alt="iOS" width="45%"/>
+  <img src="screenshots/ios/edit.png"     alt="iOS Screenshot" width="45%"/>
+  <img src="screenshots/ios/list.png"     alt="iOS Screenshot" width="45%"/>
+  <img src="screenshots/ios/actions.png"  alt="iOS Screenshot" width="45%"/>
+  <img src="screenshots/ios/settings.png" alt="iOS Screenshot" width="45%"/>
 </p>
 
-![macOS](screenshots/macos.png)
+![macOS Screenshot](./screenshots.png)
 
 ## Install
 

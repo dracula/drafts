@@ -1,5 +1,9 @@
 ### [Drafts](https://getdrafts.com)
 
+#### Install from the [Drafts Directory](https://directory.getdrafts.com)
+
+Directly from the `Install` button at: [directory.getdrafts.com/t/2Ak](https://directory.getdrafts.com/t/2Ak).
+
 #### Install using Git
 
 If you are a git user, you can install the theme and keep up to date by cloning the repo:
@@ -14,10 +18,6 @@ Easily install from [dracula/homebrew-install](https://github.com/dracula/homebr
 brew tap dracula/install
 brew install --cask dracula-drafts
 ```
-
-#### Install from the [Drafts Directory](https://directory.getdrafts.com)
-
-Directly from the `Install` button at: https://directory.getdrafts.com/t/2Ak.
 
 #### Install manually
 
